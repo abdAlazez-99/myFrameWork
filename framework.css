@@ -1,5 +1,14 @@
+:root {
+  --px-x: 0.625rem;
+  --px-15: 0.9375rem;
+  --px-2x: 1.25rem;
+  --px-25: 1.5625rem;
+  --px-3x: 1.875rem;
+  --px-4x: 2.5rem;
+}
+
 /* layout */
-.none {
+.d-none {
   display: none;
 }
 
@@ -7,20 +16,21 @@
   display: block;
 }
 
-.flex {
+.d-flex {
   display: flex;
 }
-.justify-bt {
+.jus-between {
   justify-content: space-between;
+}
+.jus-around {
+  justify-content: space-around;
 }
 .align-center {
   align-items: center;
 }
-
 .grow {
   flex-grow: 1;
 }
-
 .wrap {
   flex-wrap: wrap;
 }
@@ -66,19 +76,19 @@
   padding-block: 5px;
 }
 .p-block {
-  padding-block: 10px;
+  padding-block: var(--px-x);
 }
 .p-block-20 {
-  padding-block: 20px;
+  padding-block: var(--px-2x);
 }
 .p-inline-10 {
-  padding-inline:10px;
+  padding-inline: var(--px-x);
 }
 .p-inline-20 {
-  padding-inline:20px;
+  padding-inline: var(--px-2x);
 }
 .p-inline-30 {
-  padding-inline:30px;
+  padding-inline: var(--px-3x);
 }
 
 .pt-5 {
@@ -162,13 +172,13 @@
 }
 
 .m-inline-10 {
-  margin-inline:var(--px-x);
+  margin-inline: var(--px-x);
 }
 .m-inline-20 {
-  margin-inline:var(--px-2x);
+  margin-inline: var(--px-2x);
 }
 .m-inline-30 {
-  margin-inline:var(--px-3x);
+  margin-inline: var(--px-3x);
 }
 
 .mt-5 {
@@ -229,13 +239,13 @@
   border-radius: 5px;
 }
 .rad-10 {
-  border-radius: 10px;
+  border-radius: var(--px-x);
 }
 .rad-20 {
-  border-radius: 20px;
+  border-radius: var(--px-2x);
 }
 .rad-30 {
-  border-radius: 30px;
+  border-radius: var(--px-3x);
 }
 .rad-half {
   border-radius: 50%;
@@ -244,13 +254,13 @@
 
 /* background */
 .bg-primary {
-  background-color: var(--bs-primary);
+  background-color: var(--bg-primary);
 }
 .bg-white {
-  background-color: var(--bg-light);
+  background-color: #fff;
 }
 .bg-dark {
-  background-color: var(--bs-dark);
+  background-color: #000;
 }
 /* end background */
 
@@ -258,14 +268,11 @@
 .c-primary {
   color: var(--bs-primary);
 }
-.c-secondary {
-  color: var(--bs-secondary);
-}
 .c-dark {
-  color: var(--bs-dark);
+  color: #000;
 }
 .c-white {
-  color: var(--bg-light)
+  color: #fff;
 }
 /* end color */
 
@@ -279,14 +286,21 @@
 /* end position */
 
 /* text & fonts */
-.t-center {
+.txt-center {
   text-align: center;
 }
-.t-cap {
+.txt-cap {
   text-transform: capitalize;
 }
 .f-bold {
   font-weight: bold;
+}
+
+.fs-20 {
+  font-size: var(--px-2x);
+}
+.fs-14 {
+  font-size: 14px;
 }
 /* end text & fonts */
 /* pointer */
